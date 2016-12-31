@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+      build: .
+      command: bash -c "asterisk -cvvvvv"
+      ports:
+        - "5060:5060/tcp"
+        - "5060:5060/udp"
+        - "10000-10010:10000-10010/udp"
+      tty: true
